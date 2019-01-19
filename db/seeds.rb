@@ -10,4 +10,4 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
 
 AdminUser.create!(email: 'pjsn@cin.ufpe.br', password: '12341234', password_confirmation: '12341234')
 AdminUser.create!(email: 'samuelmataraso@gmail.com', password: '12341234', password_confirmation: '12341234')
-AdminUser.create!(email: 'hugo@jambotech.com.br', password: '12341234', password_confirmation: '12341234')
+AdminUser.create!(email: 'hugo@jambotech.com.br', password: '12341234', password_confirmation: '12341234')Course.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
