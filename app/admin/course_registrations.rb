@@ -21,15 +21,9 @@ ActiveAdmin.register CourseRegistration do
 
       form do |f|
         f.inputs "Detalhes" do
-          f.input :cicle_id, as: :select, collection: Cicle.all.map {|m| [m.description, m.id]}
-          f.input :avaliation_type, as: :select, collection: { 'Competência' => 'competence', 'Metas e Objetivos' => 'goals', 'PDI' => 'pdi', 'Clima' => 'climate'}
-          f.input :start_goal_def_date, as: :date_picker, :input_html => { :style => "width:10%;" }
-          f.input :end_goal_def_date, as: :date_picker, :input_html => { :style => "width:10%;" }
-          f.input :start_grid
-          f.input :end_grid	
-          f.input :start_date, as: :date_picker, :input_html => { :style => "width:10%;" }
-          f.input :end_date, as: :date_picker, :input_html => { :style => "width:10%;" }
-          f.input :about
+          f.input :user, :as => :select, collection: User.order(:id).all.map(&:id)
+          f.input :course, :as => :select, collection: Course.order(:id).all.map(&:id)
+          f.input :status
         end
         f.actions
       end

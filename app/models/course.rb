@@ -1,4 +1,4 @@
 class Course < ApplicationRecord
-    has_many :users
-    has_many :registrations, through: :course_registrations
+    has_many :course_registrations
+    has_many :users, through: :course_registrations
 end
