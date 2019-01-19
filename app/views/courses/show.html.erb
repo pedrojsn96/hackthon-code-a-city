@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @course.name %>
+  <strong>Title:</strong>
+  <%= @course.title %>
 </p>
 
 <p>
@@ -11,8 +11,18 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @course.user %>
+  <strong>Score min:</strong>
+  <%= @course.score_min %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @course.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @course.end_date %>
 </p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |

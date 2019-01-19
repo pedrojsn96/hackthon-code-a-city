@@ -15,8 +15,10 @@ class CoursesTest < ApplicationSystemTestCase
     click_on "New Course"
 
     fill_in "Description", with: @course.description
-    fill_in "Name", with: @course.name
-    fill_in "User", with: @course.user_id
+    fill_in "End date", with: @course.end_date
+    fill_in "Score min", with: @course.score_min
+    fill_in "Start date", with: @course.start_date
+    fill_in "Title", with: @course.title
     click_on "Create Course"
 
     assert_text "Course was successfully created"
@@ -28,8 +30,10 @@ class CoursesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Description", with: @course.description
-    fill_in "Name", with: @course.name
-    fill_in "User", with: @course.user_id
+    fill_in "End date", with: @course.end_date
+    fill_in "Score min", with: @course.score_min
+    fill_in "Start date", with: @course.start_date
+    fill_in "Title", with: @course.title
     click_on "Update Course"
 
     assert_text "Course was successfully updated"
